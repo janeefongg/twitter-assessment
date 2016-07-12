@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
   Twitter.test(req.query.screen_name)
     .then(function(data) {
       res.send(data);
-    })
+    });
 });
 
 module.exports = router;

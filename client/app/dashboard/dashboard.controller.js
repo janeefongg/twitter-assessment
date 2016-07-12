@@ -19,8 +19,8 @@
       console.log('username', username)
       DashboardFactory.getTweets(username).then(function (data) {
         vm.tweets = data.data;
-        console.log(vm.tweets)
-      })
+        vm.name = '';
+      });
     }
 
   }
