@@ -12,13 +12,14 @@
     var vm = this;
 
     vm.submit = submit;
-    vm.data = {};
+    vm.tweets = [];
 
 
     function submit (username) {
       console.log('username', username)
-      DashboardFactory.getTweets(username).then(function () {
-        console.log('finished');
+      DashboardFactory.getTweets(username).then(function (data) {
+        vm.tweets = data.data;
+        console.log(vm.tweets)
       })
     }
 
