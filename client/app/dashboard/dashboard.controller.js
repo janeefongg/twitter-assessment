@@ -8,8 +8,19 @@
   // DashboardCtrl.$inject = [];
 
   /* @ngInject */
-  function DashboardCtrl () {
+  function DashboardCtrl (DashboardFactory) {
     var vm = this;
+
+    vm.submit = submit;
+    vm.data = {};
+
+
+    function submit (username) {
+      console.log('username', username)
+      DashboardFactory.getTweets(username).then(function () {
+        console.log('finished');
+      })
+    }
 
   }
 

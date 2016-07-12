@@ -8,15 +8,22 @@
   // factoryName.$inject = [ 'dependency' ];
 
   /* @ngInject */
-  function DashboardFactory (dependency) {
+  function DashboardFactory ($http) {
     var service = {
-      functionName: functionName
+      getTweets: getTweets
     };
     return service;
 
     
 
-    function functionName () {
+    function getTweets (name) {
+
+      var params = {screen_name: name};
+      var config = { params: params};
+
+      console.log(config)
+      
+      return $http.get('/api/twitter/', config);
       
     }
   }

@@ -16,7 +16,7 @@
             url: '/dashboard',
             templateUrl: '/app/dashboard/dashboard.html',
             controller: 'DashboardCtrl',
-            controllerAs: 'Dashboard'
+            controllerAs: 'dashboard'
         })
     }
 

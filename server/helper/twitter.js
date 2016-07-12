@@ -1,4 +1,5 @@
 var Twitter = require('twitter');
+require('dotenv').config();
 
 var client = new Twitter({
   consumer_key: process.env.CONSUMER_KEY,
@@ -9,8 +10,17 @@ var client = new Twitter({
 
 var twitter = {};
 
-twitter.test = function () {
-  
+twitter.test = function (screenName) {
+  var params = {screen_name: screenName};
+  return new Promise(function (resolve, reject) {
+    client.get('statuses/user_timeline', params, function (error, tweets, response) {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(tweets);
+      }
+    })
+  })
 };
 
 module.exports = twitter;
