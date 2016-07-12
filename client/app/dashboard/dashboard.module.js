@@ -4,4 +4,4 @@
   angular
     .module('app.dashboard', []);
 
-})();
+})()
