@@ -8,7 +8,7 @@
   // DashboardCtrl.$inject = [];
 
   /* @ngInject */
-  function DashboardCtrl (DashboardFactory) {
+  function DashboardCtrl (TwitterFactory) {
     var vm = this;
 
     vm.submit = submit;

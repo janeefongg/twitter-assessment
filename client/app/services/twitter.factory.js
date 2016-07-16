@@ -3,12 +3,12 @@
 
   angular
     .module('app')
-    .factory('DashboardFactory', DashboardFactory);
+    .factory('TwitterFactory', TwitterFactory);
 
   // factoryName.$inject = [ 'dependency' ];
 
   /* @ngInject */
-  function DashboardFactory ($http) {
+  function TwitterFactory ($http) {
     var service = {
       getTweets: getTweets
     };
@@ -18,7 +18,7 @@
 
     function getTweets (name) {
 
-      var params = {screen_name: name};
+      var params = { screen_name: name};
       var config = { params: params};
 
       console.log(config)
