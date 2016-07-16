@@ -12,22 +12,17 @@
   <!--</div>-->
 <!--</div>-->
 
-<div class="site-wrapper">
+<div class="container">
 
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-
-    <div class="inner cover">
-      <h1 class="cover-heading">Let's Grab Tweets From:</h1>
-      <form class="inline-form">
-        <div class="form-group">
-          <input type="text" placeholder="Enter username..." class="form-control">
-          <!--<a href="#" class="btn btn-lg btn-default">Learn more</a>-->
+    <div>
+      <h1>Let's Grab Tweets From:</h1>
+      <form ng-submit="dashboard.submit(dashboard.name)">
+        <div>
+          <input type="text" placeholder="enter username.." class="username" ng-model="dashboard.name">
+          <!--<input type="submit"></input>-->
         </div>
-          <input type="submit" class="btn btn-primary"></input>
 
       </form>
     </div>
-      </div>
-  </div>
+
 </div>
