@@ -17,7 +17,7 @@
 
     function submit (username) {
       console.log('username', username)
-      DashboardFactory.getTweets(username).then(function (data) {
+      TwitterFactory.getTweets(username).then(function (data) {
         vm.tweets = data.data;
         vm.name = '';
       });

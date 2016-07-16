@@ -1,20 +1,22 @@
 html,
 body {
     height: 100%;
-    background-color: #0d3332;
+    background-color: #fff;
 }
 body {
-    color: #fff;
+    color: #000;
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
-    font-family: Arial;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 .container {
     padding: 50px;
 }
 
 .username {
+    font-family: 'Poppins', sans-serif;
     border: 0;
     outline: 0;
     background: transparent;
@@ -22,5 +24,9 @@ body {
     /*width: 200px;*/
     font-size: 30px;
     text-align: center;
-    color: #c8cdd6;
+    color: #000;
+}
+
+img {
+    width: 40px;
 }

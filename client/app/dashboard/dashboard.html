@@ -15,14 +15,20 @@
 <div class="container">
 
     <div>
+      <img src="https://pbs.twimg.com/profile_images/666407537084796928/YBGgi9BO.png">
       <h1>Let's Grab Tweets From:</h1>
       <form ng-submit="dashboard.submit(dashboard.name)">
         <div>
           <input type="text" placeholder="enter username.." class="username" ng-model="dashboard.name">
-          <!--<input type="submit"></input>-->
         </div>
-
       </form>
+    </div>
+
+    <div ng-repeat="tweet in dashboard.tweets">
+      <ul>
+        <li>{{tweet.created_at}}</li>
+        <li>{{tweet.text}}</li>
+      </ul>
     </div>
 
 </div>
