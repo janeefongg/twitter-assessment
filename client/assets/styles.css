@@ -60,6 +60,16 @@ a {
     list-style: none;
 }
 
+ul li {
+    list-style: none;
+    display: inline;
+}
+
+.hashtags {
+    display: inline;
+    font-size: 14px;
+}
+
 p {
     font-size: 14px;
     line-height: 2%;

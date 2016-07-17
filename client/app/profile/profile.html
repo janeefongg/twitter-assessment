@@ -1,4 +1,4 @@
-<div class="contaier">
+<div class="container" ng-init="vm.extractHashTags(vm.tweets)">
   <div class="profile">
     <img src={{vm.user.profile_image_url}} alt="User Profile Image">
     <p><strong>Name:</strong> {{vm.user.name}}</p>
@@ -8,8 +8,15 @@
     <a ui-sref="dashboard">Go Back</a>
 
   </div>
+
   <div>
-  <div ng-repeat="tweet in vm.tweets" class="tweets">
+    <ul ng-repeat="hashtag in vm.hashtags" class="hashtags">
+      <li ng-click="vm.setHash(hashtag)">#{{hashtag}}</li>
+    </ul>
+  </div>
+
+  <div>
+  <div ng-repeat="tweet in vm.tweets | filter: vm.hash" class="tweets">
     <!--<div style="display: inline-block">-->
       <!--<img src="http://getfreeicon.com/preview/heart_small.png" alt="" style="height: 20px">-->
     <!--</div>-->

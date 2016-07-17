@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('app', ['ui.router', 'app.dashboard', 'app.profile']);
+    .module('app', ['ui.router', 'angular.filter','app.dashboard', 'app.profile']);
 
 })();
