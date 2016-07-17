@@ -4,17 +4,10 @@
   angular
     .module('app.profile')
     .controller('ProfileCtrl', ProfileCtrl);
-
-  // ControllerName.$inject = [ 'dependency' ];
-
-  /* @ngInject */
-  function ProfileCtrl () {
+  
+  function ProfileCtrl ($stateParams) {
     var vm = this;
-    vm.title = 'ControllerName';
-
-    // activate();
-
-    ////////////////
+    vm.tweets = $stateParams.obj;
 
   }
 

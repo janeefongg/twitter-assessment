@@ -5,7 +5,7 @@
     .module('app')
     .config(config)
     
-    config.$inject = ['$stateProvider', '$urlRouterProvider'];
+    // config.$inject = ['$stateProvider', '$urlRouterProvider'];
     
     function config ($stateProvider, $urlRouterProvider) {
 
@@ -15,8 +15,15 @@
         .state('dashboard', {
             url: '/dashboard',
             templateUrl: '/app/dashboard/dashboard.html',
-            controller: 'DashboardCtrl',
-            controllerAs: 'dashboard'
+            controller: 'DashboardCtrl as vm'
+        })
+        .state('profile', {
+            url: '/profile',
+            templateUrl: '/app/profile/profile.html',
+            controller: 'ProfileCtrl as vm',
+            params: {
+              obj: null
+            }
         })
     }
 

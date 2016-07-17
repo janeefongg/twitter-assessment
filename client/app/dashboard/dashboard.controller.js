@@ -5,10 +5,10 @@
     .module('app.dashboard')
     .controller('DashboardCtrl', DashboardCtrl);
 
-  // DashboardCtrl.$inject = [];
+  // DashboardCtrl.$inject = [ '$state' ];
 
   /* @ngInject */
-  function DashboardCtrl (TwitterFactory) {
+  function DashboardCtrl (TwitterFactory, $state) {
     var vm = this;
 
     vm.submit = submit;
@@ -16,10 +16,11 @@
 
 
     function submit (username) {
-      console.log('username', username)
+      console.log('username', TwitterFactory)
       TwitterFactory.getTweets(username).then(function (data) {
         vm.tweets = data.data;
         vm.name = '';
+        $state.go('profile', {obj: vm.tweets});
       });
     }
 
