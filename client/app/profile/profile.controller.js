@@ -15,6 +15,7 @@
     vm.hash = "";
     vm.extractHashTags = extractHashTags;
     vm.setHash = setHash;
+    vm.setIndex = setIndex;
 
     // vm.user = userData.data[0];
     console.log(vm.tweets);
@@ -41,6 +42,12 @@
     function setHash (hash) {
       console.log(hash)
       vm.hash = '#' + hash;
+    }
+
+    function setIndex (index) {
+      var temp = vm.tweets[index];
+      vm.tweets.splice(index, 1);
+      vm.tweets.unshift(temp);
     }
 
   }
