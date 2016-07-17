@@ -1,16 +1,17 @@
 <div class="contaier">
   <div class="profile">
-    <h6>{{vm.user.name}}</h6>
-    <h6>{{vm.user.screen_name}}</h6>
-    <h6>{{vm.user.followers_count}}</h6>
-    <h6>{{vm.user.friends_count}}</h6>
-    <h6>{{vm.user.profile_image_url}}</h6>
+    <img src={{vm.user.profile_image_url}} alt="User Profile Image">
+    <p><strong>Name:</strong> {{vm.user.name}}</p>
+    <p><strong>Twitter Username:</strong> {{vm.user.screen_name}}</p>
+    <p><strong>Followers Count:</strong> {{vm.user.followers_count}}</p>
+    <p><strong>Friends Count:</strong> {{vm.user.friends_count}}</p>
+    <a ui-sref="dashboard">Go Back</a>
   </div>
   <div>
   <div ng-repeat="tweet in vm.tweets" class="tweets">
     <ul>
-      <li>Created At: {{tweet.created_at}}</li>
-      <li>Message: {{tweet.text}}</li>
+      <li>{{tweet.created_at}}</li>
+      <li>{{tweet.text}}</li>
     </ul>
   </div>
   </div>

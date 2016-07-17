@@ -30,7 +30,11 @@ body {
     color: #000;
 }
 
-img {
+a {
+    font-size: 12px;
+}
+
+.twitterimg {
     width: 40px;
 }
 
@@ -43,14 +47,20 @@ img {
 
 .tweets {
     font-size: 12px;
+    text-align: left;
+    width: 600px;
+    margin: 0 auto;
 }
 
-/*.profile {*/
-    /*display: inline-block;*/
-    /*width: 200px;*/
-    /*!*float: left;*!*/
-/*}*/
+.tweets li:first-child {
+    color: gray;
+}
 
 .tweets li {
     list-style: none;
+}
+
+p {
+    font-size: 14px;
+    line-height: 2%;
 }
