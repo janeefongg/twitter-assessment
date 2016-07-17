@@ -13,13 +13,15 @@
 
     vm.submit = submit;
     vm.tweets = [];
+    vm.isLoading = false;
 
 
     function submit (username) {
-      console.log('username', TwitterFactory)
+      vm.isLoading = true;
       TwitterFactory.getTweets(username).then(function (data) {
         vm.tweets = data.data;
         vm.name = '';
+        vm.isLoading = false;
         $state.go('profile', {obj: data});
       });
     }
