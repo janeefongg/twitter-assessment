@@ -1,25 +1,11 @@
-<!--<div>-->
-  <!--<form ng-submit="vm.submit(vm.name)">-->
-    <!--<input type="text" ng-model="vm.name" placeholder="Enter username..">-->
-    <!--<input type="submit">-->
-  <!--</form>-->
-
-  <!--<div ng-repeat="tweet in vm.tweets">-->
-    <!--<ul>-->
-      <!--<li>{{tweet.created_at}}</li>-->
-      <!--<li>{{tweet.text}}</li>-->
-    <!--</ul>-->
-  <!--</div>-->
-<!--</div>-->
-
 <div class="container">
 
     <div>
       <img src="https://pbs.twimg.com/profile_images/666407537084796928/YBGgi9BO.png" class="twitterimg">
       <h1>Let's Grab Tweets From:</h1>
-      <form ng-submit="vm.submit(vm.name)" validate>
+      <form ng-submit="vm.submit(vm.name)" name="usernameSearch" ng-disabled="usernameSearch.$invalid">
         <div>
-          <input type="text" placeholder="enter username.." class="username" ng-model="vm.name">
+          <input type="text" placeholder="enter username.." class="username" ng-model="vm.name" minlength="1" required>
         </div>
       </form>
     </div>

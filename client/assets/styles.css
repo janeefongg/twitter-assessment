@@ -30,6 +30,10 @@ body {
     color: #000;
 }
 
+.ng-touched {
+    border-bottom: 5px solid red;
+}
+
 a {
     font-size: 12px;
 }
