@@ -13,6 +13,9 @@ body {
 
 .container {
     padding: 50px;
+    width: 1005px;
+    margin: 0 auto;
+
 }
 
 .username {
@@ -29,4 +32,20 @@ body {
 
 img {
     width: 40px;
+}
+
+.tweets, .profile {
+    border: 1px solid white;
+    float: left;
+    min-height: 450px;
+    /*color: white;*/
+}
+
+.tweets {
+    font-size: 12px;
+}
+
+.profile {
+    width: 250px;
+    display: inline-block;
 }
