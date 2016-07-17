@@ -5,8 +5,6 @@
     .module('app.dashboard')
     .controller('DashboardCtrl', DashboardCtrl);
 
-  // DashboardCtrl.$inject = [ '$state' ];
-
   /* @ngInject */
   function DashboardCtrl (TwitterFactory, $state) {
     var vm = this;

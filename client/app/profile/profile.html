@@ -6,13 +6,29 @@
     <p><strong>Followers Count:</strong> {{vm.user.followers_count}}</p>
     <p><strong>Friends Count:</strong> {{vm.user.friends_count}}</p>
     <a ui-sref="dashboard">Go Back</a>
+
   </div>
   <div>
   <div ng-repeat="tweet in vm.tweets" class="tweets">
-    <ul>
-      <li>{{tweet.created_at}}</li>
-      <li>{{tweet.text}}</li>
-    </ul>
+    <!--<div style="display: inline-block">-->
+      <!--<img src="http://getfreeicon.com/preview/heart_small.png" alt="" style="height: 20px">-->
+    <!--</div>-->
+    <div style="display: inline-block">
+      <table>
+        <tr>
+        <td>
+          <img src="http://getfreeicon.com/preview/heart_small.png" alt="" style="height: 12px" ng-click="vm.clicked()">
+        </td>
+        <td style="height: 20px">
+          <ul>
+            <li>{{tweet.created_at}}</li>
+            <li>{{tweet.text}}</li>
+          </ul>
+        </td>
+        </tr>
+      </table>
+
+    </div>
   </div>
   </div>
 </div>
