@@ -13,6 +13,7 @@
     <ul ng-repeat="hashtag in vm.hashtags" class="hashtags">
       <li ng-click="vm.setHash(hashtag)">#{{hashtag}}</li>
     </ul>
+    <p ng-click="vm.setHash()" class="hashtagReset">Hashtag Reset</p>
   </div>
 
   <div>
@@ -24,7 +25,8 @@
       <table>
         <tr>
         <td>
-          <img src="http://getfreeicon.com/preview/heart_small.png" alt="" style="height: 12px" ng-click="vm.setIndex($index)">
+          <!--<img src="http://getfreeicon.com/preview/heart_small.png" alt="" >-->
+          <img src="../../assets/heart.jpg" style="height:20px" ng-click="vm.setIndex($index)" alt="favorite">
         </td>
         <td style="height: 20px">
           <ul>

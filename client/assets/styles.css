@@ -70,9 +70,17 @@ ul li {
     font-size: 14px;
 }
 
+.hashtagReset {
+    cursor: pointer;
+}
+
 p {
     font-size: 14px;
     line-height: 2%;
+}
+
+td img, .hashtags{
+    cursor: pointer;
 }
 
 /*

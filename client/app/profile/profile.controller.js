@@ -40,8 +40,11 @@
     }
 
     function setHash (hash) {
-      console.log(hash)
-      vm.hash = '#' + hash;
+      if (!hash) {
+        vm.hash = "";
+      } else {
+        vm.hash = '#' + hash;
+      }
     }
 
     function setIndex (index) {
