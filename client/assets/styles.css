@@ -34,18 +34,23 @@ img {
     width: 40px;
 }
 
-.tweets, .profile {
-    border: 1px solid white;
-    float: left;
-    min-height: 450px;
-    /*color: white;*/
-}
+/*.tweets, .profile {*/
+    /*border: 1px solid white;*/
+    /*float: left;*/
+    /*min-height: 450px;*/
+    /*!*color: white;*!*/
+/*}*/
 
 .tweets {
     font-size: 12px;
 }
 
-.profile {
-    width: 250px;
-    display: inline-block;
+/*.profile {*/
+    /*display: inline-block;*/
+    /*width: 200px;*/
+    /*!*float: left;*!*/
+/*}*/
+
+.tweets li {
+    list-style: none;
 }

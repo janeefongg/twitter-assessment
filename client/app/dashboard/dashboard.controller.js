@@ -20,7 +20,7 @@
       TwitterFactory.getTweets(username).then(function (data) {
         vm.tweets = data.data;
         vm.name = '';
-        $state.go('profile', {obj: vm.tweets});
+        $state.go('profile', {obj: data});
       });
     }
 

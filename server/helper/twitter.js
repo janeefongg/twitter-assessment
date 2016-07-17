@@ -23,4 +23,17 @@ twitter.test = function (screenName) {
   })
 };
 
+twitter.getUser = function (screenName) {
+  var params = {screen_name: screenName};
+  return new Promise(function (resolve, reject) {
+    client.get('users/lookup', params, function (error, response) {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(response);
+      }
+    })
+  })
+}
+
 module.exports = twitter;

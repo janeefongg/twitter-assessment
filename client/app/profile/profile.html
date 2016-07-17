@@ -1,11 +1,17 @@
 <div class="contaier">
   <div class="profile">
-    hi!
+    <h6>{{vm.user.name}}</h6>
+    <h6>{{vm.user.screen_name}}</h6>
+    <h6>{{vm.user.followers_count}}</h6>
+    <h6>{{vm.user.friends_count}}</h6>
+    <h6>{{vm.user.profile_image_url}}</h6>
   </div>
+  <div>
   <div ng-repeat="tweet in vm.tweets" class="tweets">
     <ul>
-      <li>{{tweet.created_at}}</li>
-      <li>{{tweet.text}}</li>
+      <li>Created At: {{tweet.created_at}}</li>
+      <li>Message: {{tweet.text}}</li>
     </ul>
+  </div>
   </div>
 </div>

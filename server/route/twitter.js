@@ -15,4 +15,11 @@ router.get('/', function (req, res) {
     });
 });
 
+router.get('/user', function (req, res) {
+  Twitter.getUser(req.query.screen_name)
+    .then(function(data) {
+    res.send(data);
+  })
+})
+
 module.exports = router;
