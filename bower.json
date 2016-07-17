@@ -1,0 +1,20 @@
+{
+  "name": "angular-boilerplate",
+  "description": "boilerplate for angular 1",
+  "main": "index.js",
+  "authors": [
+    "jane"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/janeefongg/twitter-assessment",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
