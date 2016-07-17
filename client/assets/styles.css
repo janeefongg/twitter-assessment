@@ -42,12 +42,9 @@ a {
     width: 40px;
 }
 
-/*.tweets, .profile {*/
-    /*border: 1px solid white;*/
-    /*float: left;*/
-    /*min-height: 450px;*/
-    /*!*color: white;*!*/
-/*}*/
+.error {
+    color: red;
+}
 
 .tweets {
     font-size: 12px;
