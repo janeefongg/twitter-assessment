@@ -10,7 +10,7 @@
     vm.tweets = $stateParams.obj.data;
     vm.username = $stateParams.obj.screen_name;
     vm.user = $stateParams.obj.data[0].user;
-    vm.clicked = clicked;
+    // vm.clicked = clicked;
     vm.hashtags = [];
     vm.hash = "";
     vm.extractHashTags = extractHashTags;
@@ -18,11 +18,6 @@
     vm.setIndex = setIndex;
 
     // vm.user = userData.data[0];
-    console.log(vm.tweets);
-
-    function clicked () {
-      console.log('yay!')
-    }
 
     function extractHashTags (tweets) {
       var tempArr = [];
