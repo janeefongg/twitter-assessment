@@ -10,7 +10,7 @@ var client = new Twitter({
 
 var twitter = {};
 
-twitter.test = function (screenName) {
+twitter.getTweets = function (screenName) {
   var params = {screen_name: screenName, count: 25};
   return new Promise(function (resolve, reject) {
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
@@ -23,17 +23,17 @@ twitter.test = function (screenName) {
   })
 };
 
-twitter.getUser = function (screenName) {
-  var params = {screen_name: screenName};
-  return new Promise(function (resolve, reject) {
-    client.get('users/lookup', params, function (error, response) {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(response);
-      }
-    })
-  })
-}
+// twitter.getUser = function (screenName) {
+//   var params = {screen_name: screenName};
+//   return new Promise(function (resolve, reject) {
+//     client.get('users/lookup', params, function (error, response) {
+//       if (error) {
+//         reject(error);
+//       } else {
+//         resolve(response);
+//       }
+//     })
+//   })
+// }
 
 module.exports = twitter;

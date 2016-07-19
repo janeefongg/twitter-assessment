@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 router.get('/', function (req, res) {
-  Twitter.test(req.query.screen_name)
+  Twitter.getTweets(req.query.screen_name)
     .then(function(data) {
       res.send(data);
     })
@@ -20,11 +20,11 @@ router.get('/', function (req, res) {
     })
 });
 
-router.get('/user', function (req, res) {
-  Twitter.getUser(req.query.screen_name)
-    .then(function(data) {
-    res.send(data);
-  })
-})
+// router.get('/user', function (req, res) {
+//   Twitter.getUser(req.query.screen_name)
+//     .then(function(data) {
+//     res.send(data);
+//   })
+// })
 
 module.exports = router;
