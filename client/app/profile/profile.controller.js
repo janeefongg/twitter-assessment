@@ -5,7 +5,7 @@
     .module('app.profile')
     .controller('ProfileCtrl', ProfileCtrl);
   
-  function ProfileCtrl ($stateParams, userData) {
+  function ProfileCtrl ($stateParams) {
     var vm = this;
     vm.tweets = $stateParams.obj.data;
     vm.username = $stateParams.obj.screen_name;

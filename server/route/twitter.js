@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 router.get('/', function (req, res) {
   Twitter.getTweets(req.query.screen_name)
     .then(function(data) {
+      console.log('this worked', data)
       res.send(data);
     })
     .catch(function(reason) {

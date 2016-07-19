@@ -23,6 +23,7 @@
           vm.isLoading = false;
           vm.isInvalid = true;
         } else {
+          console.log('sent back', data.data)
           vm.tweets = data.data;
           vm.name = '';
           vm.isInvalid = false;

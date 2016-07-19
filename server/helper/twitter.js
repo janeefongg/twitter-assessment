@@ -11,6 +11,7 @@ var client = new Twitter({
 var twitter = {};
 
 twitter.getTweets = function (screenName) {
+  console.log(screenName)
   var params = {screen_name: screenName, count: 25};
   return new Promise(function (resolve, reject) {
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
