@@ -16,7 +16,6 @@
 
     function submit (username) {
       var escapedUsername = _.escape(username);
-      console.log('escaped', escapedUsername)
       vm.isLoading = true;
       TwitterFactory.getTweets(escapedUsername).then(function (data) {
         if (data.data.success === false) {
