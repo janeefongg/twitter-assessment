@@ -9,22 +9,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 router.get('/', function (req, res) {
+  console.log(req)
   Twitter.getTweets(req.query.screen_name)
     .then(function(data) {
       res.send(data);
     })
-    .catch(function(reason) {
+    .catch(function() {
       res.json({
         success: false
       })
-    })
+    });
 });
-
-// router.get('/user', function (req, res) {
-//   Twitter.getUser(req.query.screen_name)
-//     .then(function(data) {
-//     res.send(data);
-//   })
-// })
 
 module.exports = router;

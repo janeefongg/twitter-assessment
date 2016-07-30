@@ -18,14 +18,10 @@
 
   <div>
   <div ng-repeat="tweet in vm.tweets | filter: vm.hash" class="tweets">
-    <!--<div style="display: inline-block">-->
-      <!--<img src="http://getfreeicon.com/preview/heart_small.png" alt="" style="height: 20px">-->
-    <!--</div>-->
     <div style="display: inline-block">
       <table>
         <tr>
         <td>
-          <!--<img src="http://getfreeicon.com/preview/heart_small.png" alt="" >-->
           <img src="../../assets/heart.jpg" style="height:20px" ng-click="vm.setIndex($index)" alt="favorite">
         </td>
         <td style="height: 20px">
