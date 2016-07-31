@@ -16,7 +16,6 @@
     vm.setHash = setHash;
     vm.setIndex = setIndex;
 
-
     function extractHashTags (tweets) {
       var tempArr = [];
       for (var i = 0; i < tweets.length; i++) {

@@ -11,8 +11,6 @@
     };
     return service;
 
-    
-
     function getTweets (name) {
 
       var params = { screen_name: name};

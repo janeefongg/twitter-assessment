@@ -21,9 +21,13 @@
             controller: 'ProfileCtrl as vm',
             params: {
               obj: null
-            }
+            },
+          onEnter: function ($state, $stateParams) {
+              if ($stateParams.obj === null) {
+                $state.go('dashboard');
+              }
+          }
         })
     }
 
 })();
-    
